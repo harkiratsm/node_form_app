@@ -1,0 +1,41 @@
+<form class="formdiv" action="/" method="POST">
+    <div class="form-group">
+        <label for="Name">Name</label>
+        <input type="text" class="form-control" required id="Name" name="name" placeholder="Enter your Name">
+    </div>
+    <div class="form-group">
+      <label for="Email">Email address</label>
+      <input type="email" class="form-control" name="email" required id="Email" aria-describedby="emailHelp" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+        <label for="Phone">Phone</label>
+        <input type="text" class="form-control" name="phone" required id="Phone" placeholder="Enter your Phone Number">
+    </div>
+    <div class="form-group">
+        <label for="Rollno">Roll No.</label>
+        <input type="text" class="form-control" name="rollno" required id="Rollno" placeholder="Enter your Roll no.">
+    </div>
+    <div class="form-group">
+        <label for="Pref">Group</label>
+        <select class="custom-select my-1 mr-sm-2" id="Pref" name="group"  required>
+            <option selected>Choose...</option>
+            <option value="1">G1</option>
+            <option value="2">G2</option>
+            <option value="3">G3</option>
+            <option value="4">G4</option>
+            <option value="5">G5</option>
+            <option value="6">G6</option>
+            <option value="7">G8</option>
+            <option value="8">G9</option>
+          </select>
+    </div>
+    <div class="form-group">
+        <label for="File">Assignment</label>
+        <input type="file"  required id="File" name="file">
+    </div>
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="CheckBox" required>
+        <label class="form-check-label" for="CheckBox">The work I am submitting is Original 😂.</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
