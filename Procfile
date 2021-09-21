@@ -1,1 +1,1 @@
-web: node index.jsheroku open
+web: node index.js
