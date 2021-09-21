@@ -1,19 +1,19 @@
 const express=require('express')
+require('dotenv').config()
 const mongoose=require('mongoose')
 const app=express();
 const Form=require('./models/Form')
 const bodyParser=require('body-parser')
 const port=5000 
 
-require('dotenv').config()
 
-mongoose.connect(process.env.DB_URL,{useNewUrlParser:true,useUnifiedTopology: true},()=>{
-    console.log("mongoose todo database connected")
-})
 app.use(express.json({limit:'50mb'}))
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.set("view engine","ejs")
+mongoose.connect(process.env.DB_URL,{useNewUrlParser:true,useUnifiedTopology: true},()=>{
+    console.log("mongoose todo database connected")
+})
 app.get('/',(req,res)=>{
     res.render('home')
 })
